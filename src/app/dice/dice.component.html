@@ -1,0 +1,17 @@
+<div class="parent">
+    <div class="child">
+        <h1>Dice Rolling</h1>
+        <img src="/assets/dice.jpg" alt="dice.jpg" *ngIf="number1===0" width="70%" height="70%">
+        <img src="/assets/dice-1.png" alt="dice-1" *ngIf="number1===1" width="70%" height="70%">
+        <img src="/assets/dice-2.png" alt="dice-2" *ngIf="number1===2" width="70%" height="70%">
+        <img src="/assets/dice-3.png" alt="dice-3" *ngIf="number1===3" width="70%" height="70%">
+        <img src="/assets/dice-4.png" alt="dice-4" *ngIf="number1===4" width="70%" height="70%">
+        <img src="/assets/dice-5.png" alt="dice-5" *ngIf="number1===5" width="70%" height="70%">
+        <img src="/assets/dice-6.png" alt="dice-6" *ngIf="number1===6" width="70%" height="70%"><br>
+
+
+        <button (click)="dice()">Roll</button>
+       <h2>Your dice rolling number is {{result}}</h2> 
+
+    </div>
+</div>

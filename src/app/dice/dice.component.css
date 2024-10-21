@@ -1,0 +1,21 @@
+.parent{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.child{
+    height: 65%;
+    width: 40%;
+    background-color:yellowgreen;
+
+}
+button{
+    background-color: royalblue;
+    color: white;
+    border-radius: 4px;
+    width: 60%; 
+    height: 10%;
+}

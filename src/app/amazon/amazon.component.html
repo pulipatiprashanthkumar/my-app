@@ -1,0 +1,73 @@
+<div class="parent">
+    <div class="top">
+        <div class="left">
+            <select [(ngModel)]="category" (change)="categorychange()">
+                <option>gadgets</option>
+                <option>fashion</option>
+                <option>footware</option>
+                <option>accessories</option>
+            </select>
+            <input type="text" placeholder="Search" [(ngModel)]="term" (keyup)="search()">
+            <button (click)="freedelivery()">Only free delivery</button><br>
+            <button (click)="pricelh()">Price Low to High</button>
+            <button (click)="pricehl()">Price High to Low </button>
+            <button (click)="ratinglh()">Rating Low to High</button>
+            <button (click)="ratinghl()">Rating High to Low</button><br>
+            <button (click)="discount()">Apply 50% Discount</button>
+            <button (click)="pricedc()">Price with delivery Changes</button><br>
+            <button (click)="totalprice()">Total Price</button>
+            <p>Total cart Items: <mark>{{products.length}}</mark> </p>
+
+        </div>
+        <div class="right">
+            <label for="">Name:</label>
+            <input type="text" [(ngModel)]="name"><br>
+            <label for="">Price:</label>
+            <input type="number" [(ngModel)]="price"><br>
+            <label for="">Rating:</label>
+            <input type="number" [(ngModel)]="rating"><br>
+            <label for="">Delivery Date:</label>
+            <input type="date" [(ngModel)]="deliveryDate">
+            <label for="">Free Delivery</label>
+            <input type="radio" id="fd" value="True" [(ngModel)]="freeDelivery">
+            <label for="">Yes</label>
+            <input type="radio" id="fd" value="False" [(ngModel)]="freeDelivery">
+            <label for="">No</label><br>
+            <button (click)="addtocart()">Add to Cart</button>
+
+        </div>
+    </div>
+    <div class="bottom">
+        <h1>List of Products</h1>
+        <table border="6">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Product Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Rating</th>
+                    <th>Delivery Date</th>
+                    <th>Free Delivery</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products;let i=index">
+                    <td>{{i+1}}</td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.category}}</td>
+                    <td>{{product.price}}</td>
+                    <td>{{product.rating}}</td>
+                    <td>{{product.deliverydate | date:'yyyy/MM/dd'}}</td>
+                    <td>{{product.freedelivery}}</td>
+
+                    <button (click)="delete(i)">Delete</button>
+
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+</div>

@@ -1,0 +1,82 @@
+<div class="parent">
+    <div class="top">
+        <div class="top-left">
+            <h2>Create Students</h2>
+            <form [formGroup]="studentForm">
+            <label for="">Name :</label>
+            <input type="text" formControlName = "name"> 
+            
+            <label for="">Phone :</label>
+            <input type="text"formControlName = "phone">
+            
+            <label for="">City :</label>
+            <input type="text" formControlName = "city">
+            
+            <label for="">DOB :</label>
+            <input type="text" formControlName = "dob">
+            
+            <label for="">Profile Picture :</label>
+            <input type="text" formControlName = "profile_picture">
+            
+            <label for="">Email :</label>
+            <input type="text" formControlName = "email">
+
+            <label for="">School Logo :</label>
+            <input type="text" formControlName = "school_logo">
+
+            <label for="">School Name :</label>
+            <input type="text" formControlName = "school_name">
+
+            <label for="">School City :</label>
+            <input type="text" formControlName = "school_city">
+            
+            <label for="">School pin :</label>
+            <input type="text" formControlName="school_pin">
+            </form>
+            <button (click)="submit()">submit</button>
+
+        </div>
+        <div class="top-right">
+
+            <label for="">Search :</label>
+            <input type="text" (keyup)="search()" [(ngModel)]="SearchText"><br><br>
+            <label for="">Coloumn :</label><select [(ngModel)]="coloumn">
+                <option value="name">Name</option>
+                <option value="city">City</option>
+                <option value="phone">Phone</option>
+            </select>
+            <label for="">Order</label>
+            <select [(ngModel)]="order">
+                <option value="asc">Asceding</option>
+                <option value="desc">Descending</option>
+            </select>
+            <button (click)="sort()">Sort</button><br><br>
+            <label for="">Page No :</label>
+            <input type="text">
+            
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="child1"*ngFor="let student of students">
+            <div class="head">
+                <img src={{student.school_logo}} alt="sssas" width="50px" >
+                <h3>{{student.school_name}}</h3>
+            </div>
+            <div class="body">
+                <p>Name :{{student.name}}</p>
+                <p>Phone :{{student.phone}}</p>
+                <p>DOB :{{student.dob}}</p>
+                <p>City :{{student.city}}</p>
+                <p>Email :{{student.email}}</p>
+                <img class="Profile" src={{student.profile_picture}} alt="" width="80px" height="100px">
+            </div>
+            <div class="tail">
+                <p>City :{{student.school_city}}</p> 
+                 <p>PIN :{{student.school_pin}}</p>
+                <button routerLink="../students-details/{{student.id}}">View</button>
+                <button>Edit</button>
+                <button (click)="delete(students.id)">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

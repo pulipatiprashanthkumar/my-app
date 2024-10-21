@@ -1,0 +1,38 @@
+body {
+    background-color: #121212; /* Dark background for the body */
+    color: #ffffff; /* Light text color */
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+thead {
+    background-color: whitesmoke; /* Darker header background */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #444; /* Darker borders */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #2a2a2a; /* Alternating row color */
+}
+
+tbody tr:hover {
+    background-color: #3a3a3a; /* Highlight on hover */
+}
+
+.green{
+    background-color: green;
+    color: yellow;
+}
+.red{
+    background-color: red;
+    color: orange;
+}

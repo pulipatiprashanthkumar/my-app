@@ -1,0 +1,79 @@
+
+/* General form styling */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Label styling */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Input field styling */
+input[type="text"], input[type="number"], input[type="month"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Radio button styling */
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Button styling */
+
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Add card button styling */
+button.add-card {
+    margin-top: 10px;
+    background-color: #28a745;
+}
+
+button.add-card:hover {
+    background-color: #218838;
+}
+
+/* Card section styling */
+div[formGroupName] {
+    border: 1px solid #e3e3e3;
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+/* Card heading */
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Delete button for each card */
+button.delete-card {
+    background-color: #dc3545;
+    margin-top: 10px;
+}
+
+button.delete-card:hover {
+    background-color: #c82333;
+}
+.error{
+    color: orange;
+}

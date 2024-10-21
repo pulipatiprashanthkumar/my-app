@@ -1,0 +1,39 @@
+
+body{
+    margin: 0px;
+}
+.parent{
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+form{
+    width: 20%;
+    height: 40%;
+    background-color:white;
+    text-align: center;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 50px;
+    line-height: 25px;
+    
+   
+    
+}
+button{
+    width: 30%;
+    height: 10%;
+    color: white;
+    background-color: royalblue;
+    border-radius: 5px;
+    
+}
+.input{
+    width: 50%;
+    border: 2px solid black;
+}
